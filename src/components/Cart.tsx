@@ -4,7 +4,7 @@ export default function Cart() {
     return (
         <>
             <div className={styles.container}>
-                <h1>Shop</h1>
+                <h1>Cart</h1>
             </div>
         </>
     )

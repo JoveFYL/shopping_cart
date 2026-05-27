@@ -46,7 +46,7 @@
 
 .icon_button:hover,
 .link:hover {
-    color: #a05a35;
+    color: var(--color-secondary);
 }
 
 .icon_button:focus-visible {
