@@ -44,7 +44,8 @@
     transition: opacity 0.2s ease;
 }
 
-.icon_button:hover {
+.icon_button:hover,
+.link:hover {
     color: #a05a35;
 }
 
@@ -53,7 +54,7 @@
     border-radius: 4px;
 }
 
-h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
+.link {
+    text-decoration: none;
+    color: black;
 }
