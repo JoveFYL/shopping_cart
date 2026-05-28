@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className={styles.container}>
-        <Header></Header>
+        <Header />
         <div className={styles.content}>
           <Outlet />
         </div>

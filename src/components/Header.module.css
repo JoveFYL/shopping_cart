@@ -3,8 +3,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem 4rem;
-    background: white;
-    color: black;
     font-family: sans-serif;
 }
 
@@ -19,6 +17,7 @@
 
 .badge {
     position: absolute;
+    font-family: var(--font-body);
     top: -8px;
     left: 18px;
     background-color: rgb(209, 91, 23);
@@ -56,5 +55,5 @@
 
 .link {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
