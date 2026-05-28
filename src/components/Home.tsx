@@ -1,3 +1,4 @@
+import Card from './Card';
 import styles from './Home.module.css';
 import {
     Carousel,
@@ -8,7 +9,7 @@ import {
 } from "./ui/carousel";
 
 export default function Home() {
-    const items = ["Item 1", "Item 2", "Item 3"];
+    const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"];
 
     return (
         <>
@@ -21,10 +22,10 @@ export default function Home() {
                     align: "start",
                     loop: true,
                 }}>
-                    <CarouselContent className={styles.carousel_content}>
+                    <CarouselContent className={`${styles.carousel_content} -ml-4`}>
                         {items.map((item, i) => (
-                            <CarouselItem key={i} className={styles.carousel_item}>
-                                <div>{item}</div>
+                            <CarouselItem key={i} className={`${styles.carousel_item} pl-4 basis-full md:basis-1/2 lg:basis-1/3`}>
+                                <Card>{item}</Card>
                             </CarouselItem>
                         ))}
                     </CarouselContent>

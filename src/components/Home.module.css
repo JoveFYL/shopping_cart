@@ -9,10 +9,7 @@
 
 .carousel {
     width: 100%;
-}
-
-.carousel_content {
-    display: flex;
+    margin-top: 2rem;
 }
 
 .carousel_item {

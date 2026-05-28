@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
 @import 'tailwindcss';
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
-@import "@fontsource-variable/noto-sans";
-@import "@fontsource-variable/playfair-display";
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+@import '@fontsource-variable/noto-sans';
+@import '@fontsource-variable/playfair-display';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -19,6 +19,7 @@
     --text-main: #45171d;
     --color-primary: #e84a5f;
     --color-secondary: #ff847c;
+    --color-border: #c97c5d;
 
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
@@ -153,13 +154,13 @@ h2 {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+    body {
+        @apply bg-background text-foreground;
     }
-  html {
-    @apply font-sans;
+    html {
+        @apply font-sans;
     }
 }
