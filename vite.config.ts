@@ -11,6 +11,11 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
   ],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './tests/setup.ts',
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
