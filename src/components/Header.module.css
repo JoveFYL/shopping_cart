@@ -4,6 +4,8 @@
     align-items: center;
     padding: 2rem 4rem;
     font-family: sans-serif;
+    background-color: transparent;
+    border-bottom: 2px solid var(--color-secondary);
 }
 
 .search_cart {
@@ -20,7 +22,8 @@
     font-family: var(--font-body);
     top: -8px;
     left: 18px;
-    background-color: rgb(209, 91, 23);
+    background-color: var(--color-primary);
+    color: var(--bg-primary);
     border-radius: 50%;
     width: 22px;
     height: 22px;
@@ -28,7 +31,7 @@
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
-    border: 2px solid white;
+    border: 2px solid var(--bg-primary);
 }
 
 .icon_button {
@@ -45,11 +48,11 @@
 
 .icon_button:hover,
 .link:hover {
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 .icon_button:focus-visible {
-    outline: 2px solid #a05a35;
+    outline: 2px solid var(--color-primary);
     border-radius: 4px;
 }
 
