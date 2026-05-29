@@ -7,19 +7,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-heading);
-}
-
 :root {
-    --bg-primary: #fecea8;
-    --text-main: #45171d;
-    --color-primary: #e84a5f;
-    --color-secondary: #ff847c;
-    --color-border: #c97c5d;
+    --bg-primary: #fefae0;
+    --bg-card: #faedcd;
+    --text-main: #3d2c1e;
+    --color-primary: #d4a373;
+    --color-secondary: #ccd5ae;
+    --color-border: #e9edc9;
 
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
@@ -156,6 +150,10 @@ h2 {
 @layer base {
     * {
         @apply border-border outline-ring/50;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: var(--font-heading);
     }
     body {
         @apply bg-background text-foreground;

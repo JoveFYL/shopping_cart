@@ -1,5 +1,6 @@
 import Card from './Card';
 import styles from './Home.module.css';
+import useProducts from '../hooks/useProducts';
 import {
     Carousel,
     CarouselContent,
@@ -9,7 +10,7 @@ import {
 } from "./ui/carousel";
 
 export default function Home() {
-    const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"];
+    const { products, loading, error } = useProducts();
 
     return (
         <>
@@ -23,9 +24,9 @@ export default function Home() {
                     loop: true,
                 }}>
                     <CarouselContent className={`${styles.carousel_content} -ml-4`}>
-                        {items.map((item, i) => (
+                        {products.map((product, i) => (
                             <CarouselItem key={i} className={`${styles.carousel_item} pl-4 basis-full md:basis-1/2 lg:basis-1/3`}>
-                                <Card>{item}</Card>
+                                <Card product={product} />
                             </CarouselItem>
                         ))}
                     </CarouselContent>
