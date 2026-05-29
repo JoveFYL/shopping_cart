@@ -1,6 +1,5 @@
-import { NavLink, useViewTransitionState } from "react-router";
-import { ShoppingCart, Search } from 'lucide-react';
-import { type Product } from '../types/product';
+import { NavLink, Form } from "react-router";
+import { ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import styles from './Header.module.css';
 
@@ -11,15 +10,22 @@ export default function Header() {
         <>
             <div className={styles.header}>
                 <NavLink to="/shop" viewTransition className={styles.link}>
-                    <h2>Shop</h2>
+                    <h2 className={styles.shop}>Shop</h2>
                 </NavLink>
                 <NavLink to="/home" viewTransition className={styles.link}>
-                    <h1>Emart</h1>
+                    <h1 className={styles.title}>Emart</h1>
                 </NavLink>
                 <div className={styles.search_cart}>
-                    <button type="button" className={styles.icon_button}>
-                        <Search size={28} />
-                    </button>
+                    <Form id="search-form" viewTransition method="get" action="/shop" role="search" className={styles.search}>
+                        <input
+                            id="q"
+                            aria-label="Search contacts"
+                            placeholder="Search Items..."
+                            type="search"
+                            name="q"
+                            className={styles.input}
+                        />
+                    </Form>
                     <div className={styles.cart_container}>
                         <NavLink to="/cart" viewTransition className={`${styles.icon_button} ${styles.link}`}>
                             <ShoppingCart />

@@ -1,7 +1,7 @@
 import App from "./App";
-import Shop from './components/Shop.tsx';
 import Home from './components/Home.tsx';
 import Cart from './components/Cart.tsx';
+import Shop, { loader as shopLoader } from './components/Shop.tsx';
 // import ErrorPage from "./ErrorPage";
 
 const routes = [
@@ -16,6 +16,7 @@ const routes = [
             {
                 path: "/shop",
                 element: <Shop />,
+                loader: shopLoader,
             },
             {
                 path: "/cart",
