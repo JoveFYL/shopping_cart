@@ -21,9 +21,11 @@ export default function Shop() {
     return (
         <>
             <div className={styles.container}>
-                {products.map((product, index) => (
-                    <Card product={product} key={product.id} index={index} />
-                ))}
+                {products.length === 0
+                    ? <p className={styles.empty}>No products found.</p>
+                    : products.map((product, index) => (
+                        <Card product={product} key={product.id} index={index} />
+                    ))}
             </div>
         </>
     )
