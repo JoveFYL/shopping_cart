@@ -1,15 +1,19 @@
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    width: 100%;
-    height: 100%;
+    gap: 1rem;
+    padding: 2rem 4rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.image {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 4px;
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-top: 2px solid var(--color-secondary);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
 }
