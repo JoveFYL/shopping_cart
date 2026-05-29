@@ -10,7 +10,7 @@ import {
 } from "./ui/carousel";
 
 export default function Home() {
-    const { products, loading, error } = useProducts();
+    const { products } = useProducts();
 
     return (
         <>

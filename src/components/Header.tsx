@@ -1,8 +1,12 @@
 import { Link } from "react-router";
 import { ShoppingCart, Search } from 'lucide-react';
+import { type Product } from '../types/product';
+import { useCart } from '../context/CartContext';
 import styles from './Header.module.css';
 
 export default function Header() {
+    const { cart } = useCart();
+
     return (
         <>
             <div className={styles.header}>
@@ -20,7 +24,7 @@ export default function Header() {
                         <Link to="/cart" className={`${styles.icon_button} ${styles.link}`}>
                             <ShoppingCart />
                         </Link>
-                        <div className={styles.badge}>0</div>
+                        <div className={styles.badge}>{cart.reduce((total, item) => total + item.quantity, 0)}</div>
                     </div>
                 </div>
             </div>

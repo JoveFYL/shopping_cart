@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from './components/Header';
 import styles from './App.module.css';
-import { CartProvider } from "./CartContext";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (

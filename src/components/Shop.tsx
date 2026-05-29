@@ -3,7 +3,7 @@ import useProducts from '../hooks/useProducts';
 import Card from './Card';
 
 export default function Shop() {
-    const { products, loading, error } = useProducts();
+    const { products } = useProducts();
     return (
         <>
             <div className={styles.container}>
