@@ -162,3 +162,8 @@ h2 {
         @apply font-sans;
     }
 }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 500ms;
+}

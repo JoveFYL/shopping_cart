@@ -8,8 +8,8 @@ export default function Shop() {
         <>
             <div className={styles.container}>
                 {
-                    products.map(product => {
-                        return <Card product={product} key={product.id} />
+                    products.map((product, index) => {
+                        return <Card product={product} key={product.id} index={index} />
                     })
                 }
             </div>
