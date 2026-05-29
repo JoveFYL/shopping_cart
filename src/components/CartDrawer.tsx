@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/sheet";
 import { useCart } from '../context/CartContext';
 import styles from './CartDrawer.module.css';
+import { Link } from "react-router";
 
 export default function CartDrawer() {
     const { cart, updateQuantity, isDrawerOpen, setIsDrawerOpen } = useCart();
@@ -55,7 +56,7 @@ export default function CartDrawer() {
                             <span>Total</span>
                             <span>${total.toFixed(2)}</span>
                         </div>
-                        <button className={styles.checkout}>Go to Checkout</button>
+                        <Link to="/cart" className={styles.checkout} onClick={() => setIsDrawerOpen(false)}>Go to Checkout</Link>
                     </div>
                 )}
             </SheetContent>
