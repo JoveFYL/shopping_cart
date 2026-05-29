@@ -10,12 +10,16 @@ interface ShopContextType {
     cart: CartItem[];
     addToCart: (product: Product) => void;
     removeFromCart: (product: Product) => void;
+    updateQuantity: (productId: number, delta: number) => void;
+    isDrawerOpen: boolean;
+    setIsDrawerOpen: (open: boolean) => void;
 }
 
 export const CartContext = createContext<ShopContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: ReactNode }) {
     const [cart, setCart] = useState<CartItem[]>([]);
+    const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
 
     function addToCart(product: Product) {
         setCart(prev => {
@@ -26,14 +30,24 @@ export function CartProvider({ children }: { children: ReactNode }) {
                 return [...prev, { product, quantity: 1 }]
             }
         });
+
+        setIsDrawerOpen(true);
     }
 
     function removeFromCart(product: Product) {
         setCart(prev => prev.filter(item => item.product.id !== product.id));
     }
 
+    function updateQuantity(productId: number, delta: number) {
+        setCart(prev => prev.flatMap(item => {
+            if (item.product.id !== productId) return [item];
+            const next = item.quantity + delta;
+            return next <= 0 ? [] : [{ ...item, quantity: next }];
+        }));
+    }
+
     return (
-        <CartContext value={{ cart, addToCart, removeFromCart }}>
+        <CartContext value={{ cart, addToCart, removeFromCart, updateQuantity, isDrawerOpen, setIsDrawerOpen }}>
             {children}
         </CartContext>
     );
