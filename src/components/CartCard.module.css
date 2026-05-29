@@ -1,0 +1,85 @@
+.card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-card);
+    border: 2px solid var(--color-secondary);
+    border-radius: 12px;
+}
+
+.image {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.price {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.qtyBtn {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--color-secondary);
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease;
+}
+
+.qtyBtn:hover {
+    background-color: var(--color-secondary);
+}
+
+.qtyValue {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    min-width: 1.5rem;
+    text-align: center;
+}
+
+.removeBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-secondary);
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    line-height: 1;
+    transition: color 0.15s ease;
+    align-self: flex-start;
+}
+
+.removeBtn:hover {
+    color: var(--text-main);
+}
