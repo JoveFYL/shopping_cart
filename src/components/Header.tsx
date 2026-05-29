@@ -1,10 +1,11 @@
-import { NavLink, Form } from "react-router";
+import { NavLink, Form, useLocation } from "react-router";
 import { ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import styles from './Header.module.css';
 
 export default function Header() {
     const { cart } = useCart();
+    const location = useLocation();
 
     return (
         <>
@@ -16,7 +17,7 @@ export default function Header() {
                     <h1 className={styles.title}>Emart</h1>
                 </NavLink>
                 <div className={styles.search_cart}>
-                    <Form id="search-form" viewTransition method="get" action="/shop" role="search" className={styles.search}>
+                    <Form key={location.pathname} id="search-form" viewTransition method="get" action="/shop" role="search" className={styles.search}>
                         <input
                             id="q"
                             aria-label="Search contacts"
