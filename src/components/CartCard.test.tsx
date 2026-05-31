@@ -23,6 +23,7 @@ const mockItem: CartItem = {
 }
 
 beforeEach(() => {
+    vi.clearAllMocks();
     vi.mocked(useCart).mockReturnValue({
         updateQuantity: mockUpdateQuantity,
         removeFromCart: mockRemoveFromCart,
