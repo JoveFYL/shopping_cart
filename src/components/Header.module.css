@@ -74,7 +74,8 @@
 .search:hover,
 .search:hover::placeholder,
 .title:hover,
-.shop:hover {
+.shop:hover,
+.icon_button:hover {
     color: var(--color-primary);
 }
 
