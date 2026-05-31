@@ -8,7 +8,7 @@ export default function Card({ product, index = 0 }: { product: Product; index?:
     return (
         <>
             <div className={styles.container} style={{ animationDelay: `${index * 0.05}s` }}>
-                <img src={product.image} alt="Product Image" className={styles.image} />
+                <img src={product.image} alt={product.title} className={styles.image} />
                 <div className={styles.info}>
                     <h2 className={styles.title}>{product.title}</h2>
                     <p className={styles.price}>${product.price}</p>
