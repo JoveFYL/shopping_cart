@@ -14,7 +14,7 @@ const routes = [
 			{
 				errorElement: <ErrorPage />,
 				children: [
-					{ index: true, element: <Navigate to="/shop" replace /> },
+					{ index: true, element: <Navigate to="/home" replace /> },
 					{
 						path: "/home",
 						element: <Home />,

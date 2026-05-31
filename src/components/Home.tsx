@@ -30,8 +30,8 @@ export default function Home() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    <CarouselPrevious className="sm:-left-12 left-6" />
+                    <CarouselNext className="sm:-right-12 right-6" />
                 </Carousel>
             </div>
         </>

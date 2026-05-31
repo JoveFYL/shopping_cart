@@ -9,16 +9,18 @@ export default function Cart() {
     return (
         <div className={styles.container}>
             <h1>Cart</h1>
-            {cart.length === 0
-                ? <p>Your cart is empty.</p>
-                : <>
-                    {cart.map((item) => <CartCard key={item.product.id} item={item} />)}
-                    <div className={styles.total}>
-                        <span>Total</span>
-                        <span>${total.toFixed(2)}</span>
-                    </div>
-                </>
-            }
+            <div className={styles.items}>
+                {cart.length === 0
+                    ? <p>Your cart is empty.</p>
+                    : <>
+                        {cart.map((item) => <CartCard key={item.product.id} item={item} />)}
+                    </>
+                }
+            </div>
+            {cart.length != 0 && <div className={styles.total}>
+                <span>Total</span>
+                <span>${total.toFixed(2)}</span>
+            </div>}
         </div>
     );
 }

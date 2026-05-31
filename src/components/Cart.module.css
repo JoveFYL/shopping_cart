@@ -4,7 +4,37 @@
     gap: 1rem;
     padding: 2rem 4rem;
     max-width: 800px;
+    max-height: 1000px;
     margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 2rem 4rem; /* Bring back original padding on desktop */
+    }
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.items::-webkit-scrollbar {
+    width: 8px;
+}
+
+.items::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.items::-webkit-scrollbar-thumb {
+    background-color: var(--color-secondary);
+    border-radius: 4px;
 }
 
 .total {

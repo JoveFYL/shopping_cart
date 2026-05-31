@@ -14,6 +14,14 @@
     position: relative;
     justify-content: flex-end;
     align-items: center;
+    min-width: 0;
+}
+
+.search {
+    min-width: 0;
+    width: 100%;
+    max-width: 300px;
+    margin-left: 20px;
 }
 
 .cart_container {
@@ -44,6 +52,9 @@
     font-size: 1rem;
     transition: border-color 0.2s;
     background-color: transparent;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .input:focus {
@@ -71,4 +82,20 @@
     text-decoration: none;
     color: inherit;
     width: fit-content;
+}
+
+@media (max-width: 640px) {
+    .header {
+        padding: 1rem 1.25rem;
+    }
+
+    .search {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 641px) {
+    .header {
+        padding: 1.5rem 2rem;
+    }
 }
